@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Film from './Film';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import '../styles/animation.css';
 
 function FilmPlaylist({ playlist, removeFromPlaylist }) {
 

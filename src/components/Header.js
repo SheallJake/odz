@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import '../styles/Header.css';
 
 function Header(playlist) {
     const [playlistCount, setPlaylistCount] = useState(playlist.playlist.length);

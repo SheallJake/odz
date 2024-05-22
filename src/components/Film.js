@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
+import '../styles/filmCard.css';
 
 function Film({ playlist, movie, addToPlaylist, removeFromPlaylist, inPlaylist }) {
 
