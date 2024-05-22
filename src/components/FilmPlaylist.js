@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import Film from './Film';
 
-function FilmPlaylist({ addToPlaylist }) {
+function FilmPlaylist({ playlist, removeFromPlaylist }) {
 
     const [films, setFilms] = useState([]);
 
     return (
         <div>
-            <div>
-                {films.length > 0 ? films.map(movie => (
-                    <Film key={movie.id} movie={movie} addToPlaylist={addToPlaylist} />
-                )) : <p>Playlist is empty</p>}
+            <div className='film-list'>
+                {playlist.length > 0 ? playlist.map(movie => (
+                    <Film key={movie.id} movie={movie} inPlaylist={true} removeFromPlaylist={removeFromPlaylist} playlist={playlist} />
+                )) : <h1 className='playlist-empty-title'>Playlist is empty</h1>}
             </div>
         </div>
     );

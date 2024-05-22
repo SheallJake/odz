@@ -8,8 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   const [playlist, setPlaylist] = useState([]);
   const addToPlaylist = (film) => {
-    const playlistFilm = [playlist.length + 1, film]
-    setPlaylist([...playlist, playlistFilm]);
+    setPlaylist([...playlist, film]);
   };
 
   const removeFromPlaylist = (film) => {
@@ -22,7 +21,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<FilmList playlist={playlist} addToPlaylist={addToPlaylist} />} />
-          <Route path="/FilmPlaylist" element={<FilmPlayList addToPlaylist={addToPlaylist} />} />
+          <Route path="/FilmPlaylist" element={<FilmPlayList playlist={playlist} removeFromPlaylist={removeFromPlaylist} />} />
         </Routes>
       </div>
     </BrowserRouter>

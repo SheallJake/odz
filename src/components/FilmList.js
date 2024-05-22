@@ -39,7 +39,7 @@ function FilmList({ playlist, addToPlaylist }) {
             <h1 className='list-title'>List of movies</h1>
             <div className='film-list'>
                 {movies.map(movie => (
-                    <Film key={movie.id} movie={movie} addToPlaylist={addToPlaylist} />
+                    <Film key={movie.id} movie={movie} addToPlaylist={addToPlaylist} inPlaylist={false} playlist={playlist} />
                 ))}
             </div>
             <div className='pagination'>

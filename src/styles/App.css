@@ -88,3 +88,33 @@ header {
     max-width: 100%;
     height: auto;
 }
+
+.playlist-empty-title {
+    text-align: center;
+}
+
+.add-remove-button {
+    margin: 0 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.add-remove-button:hover {
+    transition: transform 0.1s ease-in-out;
+    transform: scale3d(1.1, 1.1, 1.1);
+}
+
+
+.add-remove-button:disabled {
+    margin: 0 10px;
+    background-color: rgba(0, 0, 0, 0.267);
+    color: white;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.1s ease-in-out;
+    cursor: pointer;
+}
