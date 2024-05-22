@@ -1,0 +1,22 @@
+.film-page {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    height: 100%;
+}
+
+.film-poster {
+    height: 100%;
+}
+
+.film-poster img {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.film-page hr {
+    margin-inline: 20px;
+}
+
+.RightSide {
+    margin-left: 20px;
+}

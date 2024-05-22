@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 function Header() {
     return (
         <header>
-            <Link className='header-title-link' to={"/"}>
+            <Link className='header-title-link' to={"/"} >
                 <div className="header-title">
                     <h1>NWYM</h1>
                     <h4>Night with your movie</h4>
