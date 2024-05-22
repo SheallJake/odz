@@ -8,8 +8,8 @@ function Film({ playlist, movie, addToPlaylist, removeFromPlaylist, inPlaylist }
     const [isAdded, setIsAdded] = useState(false);
 
     useEffect(() => {
-        setIsAdded(playlist.some(film => film.id === movie.id)); // Check if movie exists
-    }, [playlist, movie]); // Update on movie or playlist change
+        setIsAdded(playlist.some(film => film.id === movie.id));
+    }, [playlist, movie]);
 
     const handleClick = () => {
         if (!isAdded) {
