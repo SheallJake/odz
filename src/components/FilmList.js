@@ -25,10 +25,12 @@ function FilmList() {
 
     return (
         <div>
-            <h1>FilmList</h1>
-            {movies.map(movie => ( // Loop through movies array and render Film components
-                <Film key={movie.id} movie={movie} />
-            ))}
+            <h1 className='list-title'>List of movies</h1>
+            <div className='film-list'>
+                {movies.map(movie => ( // Loop through movies array and render Film components
+                    <Film key={movie.id} movie={movie} />
+                ))}
+            </div>
         </div>
     );
 }
