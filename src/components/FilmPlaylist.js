@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Film from './Film';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 function FilmPlaylist({ playlist, removeFromPlaylist }) {
 
@@ -7,11 +8,13 @@ function FilmPlaylist({ playlist, removeFromPlaylist }) {
 
     return (
         <div>
-            <div className='film-list'>
+            <TransitionGroup className={`film-list`}>
                 {playlist.length > 0 ? playlist.map(movie => (
-                    <Film key={movie.id} movie={movie} inPlaylist={true} removeFromPlaylist={removeFromPlaylist} playlist={playlist} />
+                    <CSSTransition key={'anim' + movie.id} timeout={200} classNames="fade">
+                        <Film key={movie.id} movie={movie} inPlaylist={true} removeFromPlaylist={removeFromPlaylist} playlist={playlist} />
+                    </CSSTransition>
                 )) : <h1 className='playlist-empty-title'>Playlist is empty</h1>}
-            </div>
+            </TransitionGroup>
         </div>
     );
 }
