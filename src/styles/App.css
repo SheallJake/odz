@@ -142,3 +142,17 @@ header {
     opacity: 0;
     transition: opacity 200ms ease-out;
 }
+
+.circle-indicator {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    border-radius: 50%;
+    padding: 10px 12px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1;
+}

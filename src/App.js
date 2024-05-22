@@ -19,7 +19,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header />
+        <Header playlist={playlist} />
         <Routes>
           <Route path="/" element={<FilmList playlist={playlist} addToPlaylist={addToPlaylist} />} />
           <Route path="/FilmPlaylist" element={<FilmPlayList playlist={playlist} removeFromPlaylist={removeFromPlaylist} />} />
