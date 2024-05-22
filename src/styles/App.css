@@ -43,8 +43,31 @@ header {
     width: 100%;
 }
 
+
+.pagination {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination button {
+    margin: 0 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    transition: transform 0.1s ease-in-out;
+    transform: scale3d(1.1, 1.1, 1.1);
+}
+
+
 .film-card {
-    width: 160px;
+    width: 140px;
     font-size: 0.5em;
     margin: 10px;
     text-align: center;
