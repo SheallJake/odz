@@ -5,8 +5,6 @@ import '../styles/animation.css';
 
 function FilmPlaylist({ playlist, removeFromPlaylist }) {
 
-    const [films, setFilms] = useState([]);
-
     return (
         <div>
             <TransitionGroup className={`film-list`}>

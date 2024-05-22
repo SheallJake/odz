@@ -4,7 +4,6 @@ import '../styles/filmPage.css';
 function FilmPage({ }) {
     const location = useLocation();
     const movie = location.state?.movie;
-    console.log(movie);
 
     const posterUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
 

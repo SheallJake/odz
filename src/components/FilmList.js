@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Film from './Film';
-import { Link } from "react-router-dom";
 
 function FilmList({ playlist, addToPlaylist }) {
     const [movies, setMovies] = useState([]);
