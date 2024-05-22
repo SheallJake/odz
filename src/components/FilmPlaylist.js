@@ -1,10 +1,17 @@
+import React, { useState } from 'react';
+import Film from './Film';
 
+function FilmPlaylist({ addToPlaylist }) {
 
-function FilmPlaylist() {
+    const [films, setFilms] = useState([]);
 
     return (
         <div>
-            <img width="64" height="64" src="https://img.icons8.com/pastel-glyph/64/cinema-.png" alt="cinema-" />
+            <div>
+                {films.length > 0 ? films.map(movie => (
+                    <Film key={movie.id} movie={movie} addToPlaylist={addToPlaylist} />
+                )) : <p>Playlist is empty</p>}
+            </div>
         </div>
     );
 }

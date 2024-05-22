@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Film from './Film';
 
-function FilmList() {
+function FilmList({ playlist, addToPlaylist }) {
     const [movies, setMovies] = useState([]);
     const [page, setPage] = useState(1);
 
@@ -39,7 +39,7 @@ function FilmList() {
             <h1 className='list-title'>List of movies</h1>
             <div className='film-list'>
                 {movies.map(movie => (
-                    <Film key={movie.id} movie={movie} />
+                    <Film key={movie.id} movie={movie} addToPlaylist={addToPlaylist} />
                 ))}
             </div>
             <div className='pagination'>
